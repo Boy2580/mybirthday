@@ -1,0 +1,21 @@
+.press-animation {
+  animation: press 0.18s ease-out;
+}
+
+@keyframes press {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+
+@keyframes wiggle {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-2px); }
+}
+
+.about-link:hover .wiggle-hover {
+    animation: wiggle 3s ease-in-out infinite;
+}

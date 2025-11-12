@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link"
+import Aboutbtn from "@/app/(main_layout)/btn/btn_about/page"
+import Sendbtn from "@/app/(main_layout)/btn/btn_send/page"
 
 function Home() {
     return (
         <div className="flex px-10">
             <div className=" flex-1">
-                <h1 className="pt-15 text-4xl">Mr Teeramet Pakkotanang</h1>
+                <h1 className="pt-15 text-4xl ">Mr Teeramet Pakkotanang</h1>
                 <div className="flex flex-col gap-3 pt-10">
                     <p>My skills and interests are mostly about coding. I love Python because it's</p>
                     <p>easy to write and great for beginners. </p>
@@ -18,18 +22,8 @@ function Home() {
                     <p className="text-xl">King Mongkut's Institute of Technology Ladkrabang</p>
                 </div>
                 <div className="flex gap-5">
-                    <Link href="/about" className="bg-[#000000] py-5 px-3 w-40 border text- rounded-full flex items-center justify-between text-sm leading-none h-14">
-                        <div className="text-white mt-1 pl-3 text-[15px]">About Me</div>
-                        <div className="bg-[#FB9E3A] w-10 h-10 rounded-full flex justify-center items-center">
-                            <img src="/image/rr.svg" alt="Go to about page" className="w-7" />
-                        </div>
-                    </Link>
-                    <Link href="/" className=" py-5 px-3 w-40 border text- rounded-full flex items-center justify-around text-sm leading-none h-14">
-                        <div className="text-[#FB9E3A] mt-1 pl-3 text-[20px]">Send</div>
-                        <div>
-                            <img src="/image/rarrow.svg" alt="Go to about page" className="w-7" />
-                        </div>
-                    </Link>
+                    <Aboutbtn/>
+                    <Sendbtn/>
                 </div>
 
             </div>

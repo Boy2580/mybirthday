@@ -1,12 +1,29 @@
 "use client";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import "./Navstyle.css"
 
 export default function Navbar() {
 
     const currentPath = usePathname();
 
-    const baseLinkClasses = " border text- rounded-full py-2 px-7 flex items-center justify-center text-sm leading-none pt-3 h-10"
+    const baseLinkClasses = "resolution transition-all duration-300 border rounded-full py-2 px-7 flex items-center justify-center text-sm leading-none pt-3 h-10"
+    const getLinkClasses = (href: string) => {
+        const isActive = currentPath === href;
+        let classes = baseLinkClasses;
+        if (href !== '/') {
+            classes += " bg-black text-white border-black";
+        }
+        if (isActive) {
+            if (href === "/") {
+                classes = baseLinkClasses;
+            } else {
+                classes = `${baseLinkClasses} bg-[#FB9E3A] text-black border-[#FB9E3A] mt-2`;
+            }
+        }
+
+        return classes;
+    };
 
 
     return (
@@ -23,15 +40,46 @@ export default function Navbar() {
             </div>
             <div className='flex-1 flex justify-end'>
                 <div className='flex gap-1 items-center'>
-                    <Link href="/" className={`${baseLinkClasses}`}>Home</Link>
 
-                    <Link href="/about" className={`${baseLinkClasses} bg-black text-white`}>About</Link>
+                    {/* ใช้ฟังก์ชันที่ปรับปรุงแล้ว */}
+                    <Link href="/" className={getLinkClasses("/")}>Home</Link>
 
-                    <Link href="/portfolio" className={`${baseLinkClasses} bg-black text-white`}>Portfolio</Link>
+                    <div className='justify-center flex flex-col items-center'>
+                        {currentPath === "/about" && (
+                            <img src="/nav/person.svg" alt="" className='w-5 icon-float-up' />
+                        )}
+                        <Link href="/about" className={getLinkClasses("/about")}>
+                            About
+                        </Link>
+                    </div>
 
-                    <Link href="/love" className={`${baseLinkClasses} bg-black text-white`}>Love</Link>
 
-                    <Link href="/timeline" className={`${baseLinkClasses} bg-black text-white`}>Timeline</Link>
+                    <div className='justify-center flex flex-col items-center'>
+                        {currentPath === "/portfolio" && (
+                            <img src="/nav/portfolio.svg" alt="" className='w-5 icon-float-up' />
+                        )}
+                        <Link href="/portfolio" className={getLinkClasses("/portfolio")}>
+                            Portfolio
+                        </Link>
+                    </div>
+
+                    <div className='justify-center flex flex-col items-center'>
+                        {currentPath === "/love" && (
+                            <img src="/nav/love.svg" alt="" className='w-5 icon-float-up' />
+                        )}
+                        <Link href="/love" className={getLinkClasses("/love")}>
+                            Love
+                        </Link>
+                    </div>
+
+                    <div className='justify-center flex flex-col items-center'>
+                        {currentPath === "/timeline" && (
+                            <img src="/nav/timeline.svg" alt="" className='w-5 icon-float-up' />
+                        )}
+                        <Link href="/timeline" className={getLinkClasses("/timeline")}>
+                            Timeline
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>

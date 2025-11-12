@@ -1,6 +1,8 @@
+"use client";
+
+
 import Link from "next/link"
-
-
+import Githubbtn from "@/app/(main_layout)/btn/btn_github/page"
 
 
 function Little() {
@@ -26,7 +28,7 @@ function Little() {
                             <p className="font-extrabold py-5">“Where my ideas turn into code.”</p>
                             <p className="font-thin">When I’m not coding, you’ll probably find me eating or playing games with my friends to relax. Also, I really like aliens!</p>
                         </div>
-                        <Link href="https://github.com/Boy2580" className="flex items-center border rounded-full justify-between p-1 w-35"><img src="/image/github.svg" alt="" className="w-8 " /><p className="pt-1.5 pl-2">NEXT</p><img src="/image/arrow.svg" alt="" className="w-8" /></Link>
+                        <Githubbtn/>
                     </div>
                 </div>
                 <div className="z-20 w-full bg-black rounded-[15px] md:bg-white">
@@ -37,7 +39,7 @@ function Little() {
                             <p className="font-extrabold py-5">“Memories captured through my eyes.”</p>
                             <p className="font-thin">I take photos to keep the beautiful memories that my brain can’t hold forever.Sometimes moments fade from our minds, but pictures help bring them back to life.</p>
                         </div>
-                        <Link href="/" className="flex items-center border rounded-full justify-between p-1 w-35"><img src="/image/image.svg" alt="" className="w-8 " /><p className="pt-1.5 pl-2">NEXT</p><img src="/image/tarrow.svg" alt="" className="w-8" /></Link>
+                        <Link href="/" className="hover:scale-98 flex items-center border rounded-full justify-between p-1 w-35"><img src="/image/image.svg" alt="" className="w-8 " /><p className="pt-1.5 pl-2">NEXT</p><img src="/image/tarrow.svg" alt="" className="w-5" /></Link>
                     </div>
                 </div>
                 <div className="z-20 w-full bg-black rounded-[15px] md:bg-white">
@@ -48,7 +50,7 @@ function Little() {
                             <p className="font-extrabold py-5">“Something new is coming...”</p>
                             <p className="font-thin">At a time not long from now; in the near future.</p>
                         </div>
-                        <Link href="/" className="flex items-center border rounded-full justify-between p-1 w-35"><img src="/image/whale.jpg" alt="" className="w-8 " /><p className="pt-1.5 pl-2">NEXT</p><img src="/image/barrow.svg" alt="" className="w-8" /></Link>
+                        <Link href="/" className="hover:scale-98 flex items-center border rounded-full justify-between p-1 w-35"><img src="/image/whale.jpg" alt="" className="w-8 " /><p className="pt-1.5 pl-2">NEXT</p><img src="/image/barrow.svg" alt="" className="w-5" /></Link>
                     </div>
                 </div>
                 <div className="bg-black hidden md:block rounded-[15px] h-70 absolute inset-x-6 top-27 z-10"></div>
