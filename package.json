@@ -2,13 +2,13 @@
   "name": "mybirthday",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "eslint",
-    "export": "next export"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "eslint"
+},
+
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
     "date-fns": "^4.1.0",
