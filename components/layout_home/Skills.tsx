@@ -39,7 +39,7 @@ function Skills() {
           </div>
 
           <div className="h-50 lg:h-auto border-3 border-black rounded-[15px] row-span-5 col-start-5 bg-[url('/image/c.png')] bg-cover bg-center flex justify-end flex-col">
-            <Link href="/" className="bg-black border-black block p-3 text-center rounded-b-[8px]">
+            <Link href="/" className="bg-black border-black block p-3 text-center rounded-b-[7]">
               <p className="pt-1 font-thin text-white">Certificate</p>
             </Link>
           </div>

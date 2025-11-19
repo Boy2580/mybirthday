@@ -56,10 +56,10 @@ export default function Navbar() {
 
           {isOpen && (
             <div className="absolute bg-white rounded-2xl shadow-2xl px-5 top-26 right-6 flex flex-col items-center gap-3 py-4 z-50 w-[175px]">
-              <Link href="/" className={getLinkClasses("/")} className="rounded-2xl w-full bg-white text-black border-2 text-center text-[15px] font-thin py-3">
+              <Link href="/" className="rounded-2xl w-full bg-white text-black border-2 text-center text-[15px] font-thin py-3">
                 Home
               </Link>
-              <Link href="/about" className={getLinkClasses("/about")} className="rounded-2xl w-full bg-black text-white text-center text-[15px] font-thin py-3">
+              <Link href="/about" className="rounded-2xl w-full bg-black text-white text-center text-[15px] font-thin py-3">
                 About
               </Link>
               <Link href="/portfolio" className="rounded-2xl w-full bg-black text-white text-center text-[15px] font-thin py-3">
