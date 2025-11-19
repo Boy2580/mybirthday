@@ -99,7 +99,7 @@ const CountUpDisplay: React.FC<CountUpDisplayProps> = ({
                 <p className={`ml-4 ${textColor}`}>{animatedValue.toLocaleString()}</p> 
                 <img src={icon} alt={`${label} Icon`} className="w-15 mb-4" />
             </div>
-            <h1 className={`${newblock} w-54 h-20 px-3 pt-2 ${label === 'ปี' ? 'bg-black text-white' : 'bg-white'}`}>
+            <h1 className={`${newblock} hidden md:flex w-54 h-20 px-3 pt-2 ${label === 'ปี' ? 'bg-black text-white' : 'bg-white'}`}>
                 {label}
             </h1>
         </div>
@@ -140,8 +140,8 @@ function Time() {
     const DisplayDays = age.totalDays;
 
     return (
-        <div className="bg-[#F2F2F2] h-85 my-20 px-15 py-5 flex">
-            <div className="flex-col h-full flex justify-around">
+        <div className="bg-[#F2F2F2] h-auto lg:h-85 my-20 px-15 py-5 flex flex-col lg:flex-row">
+            <div className="gap-5 flex-col h-full flex justify-around">
                 
                 {/* Years Block */}
                 <CountUpDisplay
@@ -176,11 +176,12 @@ function Time() {
             </div>
             
             {/* Display Birth Location/Date */}
-            <div className="flex-1 text-right flex flex-col text-5xl justify-around font-thin">
-                <h1>Born on November 25 </h1>
-                <h1>2006 in Chiang Rai </h1>
-                <h1>Thailand</h1>
-            </div>
+<div className="pl-2 lg:pl-0 py-5 gap-6 lg:gap-0 lg:py-0 flex-1 lg:text-right flex flex-col justify-around font-thin">
+  <h1 className="text-3xl md:text-4xl lg:text-5xl">Born on November 25</h1>
+  <h1 className="text-3xl md:text-4xl lg:text-5xl">2006 in Chiang Rai</h1>
+  <h1 className="text-3xl md:text-4xl lg:text-5xl">Thailand</h1>
+</div>
+
         </div>
     );
 }

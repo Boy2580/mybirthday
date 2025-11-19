@@ -8,9 +8,9 @@ function Tact() {
         <div>
             <div className="text-center py-10">
                 <h1 className="text-3xl">Contact</h1>
-                <p className="font-thin">I'm open to exciting opportunities and what you have to offer or just want to say hi!</p>
+                <p className="font-thin px-5">I'm open to exciting opportunities and what you have to offer or just want to say hi!</p>
             </div>
-            <div className="px-13 py-15 flex">
+            <div className="px-13 pb-15 flex flex-col gap-5 lg:flex-row">
                 <div className="flex flex-col gap-6 flex-1 justify-between">
                     <div className="flex flex-col gap-5">
                         <div className="flex items-center gap-4"><img src="/image/email.svg" alt="" className="w-11" /><p>Email:boycubeu@gmail.com</p></div>
@@ -34,7 +34,7 @@ function Tact() {
                     </form>
                 </div>
                 <div className="flex-1 flex justify-center">
-                    <div className=" w-75 h-full rounded-[15px] border bg-[url('/image/view.jpg')] bg-cover bg-center">
+                    <div className="flex-1 w-75 lg:h-full h-60 rounded-[15px] border bg-[url('/image/view.jpg')] bg-cover bg-center">
                     </div>
                 </div>
             </div>

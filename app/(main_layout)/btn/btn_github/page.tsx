@@ -7,7 +7,7 @@ function page() {
             <Link href="https://github.com/Boy2580" 
             className="hover:scale-98 flex items-center border rounded-full justify-between p-1 w-35">
                 <img src="/image/github.svg" alt="" className="w-8 " />
-                <p className="pt-1.5 pl-2 hover:text-3xl">NEXT</p>
+                <p className="pt-1.5 pl-2 ">NEXT</p>
                 <img src="/image/arrow.svg" alt="" className="w-5" />
             </Link>
         </div>

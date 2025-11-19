@@ -19,3 +19,11 @@
 .about-link:hover .wiggle-hover {
     animation: wiggle 3s ease-in-out infinite;
 }
+
+.py:hover .ef{
+  margin-left: 8px;
+}
+
+.py:hover .sc{
+  transform: scale(0.9);
+}
